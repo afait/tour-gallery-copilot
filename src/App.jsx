@@ -1,17 +1,7 @@
-// In App.jsx: // Fetch tours from https://course-api.com/react-tours-project using useEffect
-// Store in state: tours, loading, error
-
-// // If loading is true, display "Loading..."
-// If error, display an error message
-// Else, render Gallery with tour data
-
-
-// If no tours are left, show a "Refresh" button to refetch the data
-
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Gallery from './components/Gallery';
 
-function App() {
+const App = () => {
   const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -38,7 +28,7 @@ function App() {
   }, []);
 
   const removeTour = (id) => {
-    setTours(tours.filter((tour) => tour.id !== id));
+    setTours((prevTours) => prevTours.filter((tour) => tour.id !== id));
   };
 
   if (loading) {
@@ -59,11 +49,11 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Tours</h1>
+    <main>
+      <h1>Tour Comparison</h1>
       <Gallery tours={tours} onRemove={removeTour} />
-    </div>
+    </main>
   );
-}
+};
 
 export default App;
