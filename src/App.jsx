@@ -6,6 +6,8 @@
 // Else, render Gallery with tour data
 
 
+// If no tours are left, show a "Refresh" button to refetch the data
+
 import { useState, useEffect } from 'react';
 import Gallery from './components/Gallery';
 
