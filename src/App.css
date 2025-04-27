@@ -1,0 +1,80 @@
+body {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* White text */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center all text */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  color: #61dafb; /* Blue color for the title */
+  text-decoration: underline; /* Underline the title */
+  text-align: center; /* Ensure the title is centered */
+}
+
+h2, h3 {
+  color: #ffffff; /* Ensure other headings are white */
+}
+
+button {
+  background-color: #1f1f1f; /* Dark button background */
+  color: #ffffff; /* White text for buttons */
+  border: 1px solid #ffffff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #ffffff; /* White background on hover */
+  color: #121212; /* Dark text on hover */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 1.5rem; /* Space between cards */
+  padding: 1rem;
+  justify-content: center; /* Center the grid */
+}
+
+.card {
+  background-color: #1f1f1f; /* Dark card background */
+  padding: 2em;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Add a deeper shadow */
+}
+
+.read-the-docs {
+  color: #888; /* Slightly lighter text for secondary content */
+}
+
+a {
+  color: #61dafb; /* Light blue for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
